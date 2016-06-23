@@ -48,6 +48,7 @@ class PokemonDetailVC: UIViewController {
         pokedexLbl.text = "\(pokemon.pokedexId)"
         weightLbl.text = pokemon.weight
         attackLbl.text = pokemon.attack
+        
         if pokemon.nextEvolutionId == "" {
             evoLbl.text = "No Evolutions"
             nextEvoImg.hidden = true
@@ -59,10 +60,8 @@ class PokemonDetailVC: UIViewController {
             if pokemon.nextEvolutionLvl != "" {
                 str += " - LVL \(pokemon.nextEvolutionLvl)"
             }
-        }
-        
-
-        
+            evoLbl.text = str
+        }    
     }
     
     @IBAction func backBtnPressed(sender: AnyObject) {
